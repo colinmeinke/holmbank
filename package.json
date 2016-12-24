@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "next": "^1.2.3"
+  },
+  "name": "holmbank",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
+  },
+  "version": "0.0.0"
+}
