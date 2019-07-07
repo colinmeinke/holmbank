@@ -1,7 +1,11 @@
 {
+  "version": 2,
   "alias": [
     "holmbank.now.sh",
     "holmbank.co.uk"
   ],
-  "name": "holmbank"
+  "name": "holmbank",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
 }

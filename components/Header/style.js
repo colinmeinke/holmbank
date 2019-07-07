@@ -1,21 +1,21 @@
 import config from '../../config/style'
-import css from 'next/css'
+import css from 'styled-jsx/css'
 
-const main = css({
-  background: config.block.color.light.background,
-  borderBottom: `1px solid ${config.block.color.light.border}`,
-  padding: `${config.padding.small}px`
-})
+export default css`
+  header {
+    background: ${config.block.color.light.background};
+    border-bottom: 1px solid ${config.block.color.light.border};
+    padding: ${config.padding.small}px;
+  }
 
-const title = css({
-  fontSize: `${config.font.size.large}px`,
-  fontWeight: 'bold'
-})
+  h1 {
+    font-size: ${config.font.size.large}px;
+    font-weight: bold;
+  }
 
-const subTitle = css({
-  color: config.font.color.light,
-  fontSize: `${config.font.size.small}px`,
-  fontWeight: 'normal'
-})
-
-export default { main, title, subTitle }
+  h2 {
+    color: ${config.font.color.light};
+    font-size: ${config.font.size.small}px;
+    font-weight: normal;
+  }
+`

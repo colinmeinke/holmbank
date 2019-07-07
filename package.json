@@ -1,10 +1,13 @@
 {
   "dependencies": {
-    "next": "^1.2.3"
+    "@now/static-build": "^0.6.2",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "name": "holmbank",
   "scripts": {
-    "build": "next build",
+    "build": "next build && next export -o dist",
     "dev": "next",
     "start": "next start"
   },

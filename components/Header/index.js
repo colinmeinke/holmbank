@@ -2,12 +2,13 @@ import React from 'react'
 import style from './style'
 
 export default () => (
-  <header className={style.main}>
-    <h1 className={style.title}>
+  <header>
+    <h1>
       Holmbank
     </h1>
-    <h2 className={style.subTitle}>
+    <h2>
       Stories from my Flying Logbook – And other scary tales
     </h2>
+    <style jsx>{ style }</style>
   </header>
 )

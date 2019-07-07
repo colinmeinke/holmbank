@@ -1,37 +1,46 @@
 import config from '../../config/style'
-import css from 'next/css'
+import css from 'styled-jsx/css'
 
-const main = css({
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  maxWidth: '920px',
-  '& p, & img': {
-    marginTop: `${config.margin.medium}px`
+export default css`
+  article {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 920px;
   }
-})
 
-const container = css({
-  background: config.block.color.light.background,
-  padding: `${config.padding.small}px`,
-  margin: `${config.margin.small}px`,
-  [`@media (min-width: ${config.breakpoint.medium}px)`]: {
-    border: `1px solid ${config.block.color.light.border}`,
-    padding: `${config.padding.medium}px`,
-    margin: `${config.margin.medium}px`,
-  },
-  [`@media (min-width: ${config.breakpoint.large}px)`]: {
-    padding: `${config.padding.large}px`,
-    margin: `${config.margin.large}px`,
-  },
-})
+  div {
+    background: ${config.block.color.light.background};
+    padding: ${config.padding.small}px;
+    margin: ${config.margin.small}px;
+  }
 
-const title = css({
-  fontSize: config.font.size.huge
-})
+  div :global(p),
+  div :global(img) {
+    margin-top: ${config.margin.medium}px;
+  }
 
-const published = css({
-  color: config.font.color.light,
-  fontSize: `${config.font.size.small}px`
-})
+  h3 {
+    font-size: ${config.font.size.huge}px;
+  }
 
-export default { container, main, published, title }
+  p {
+    color: ${config.font.color.light};
+    font-size: ${config.font.size.small}px;
+  }
+
+  @media (min-width: ${config.breakpoint.medium}px) {
+    div {
+      border: 1px solid ${config.block.color.light.border};
+      padding: ${config.padding.medium}px;
+      margin: ${config.margin.medium}px;
+      
+    }
+  }
+
+  @media (min-width: ${config.breakpoint.large}px) {
+    div {
+      padding: ${config.padding.large}px;
+      margin: ${config.margin.large}px;
+    }
+  }
+`
